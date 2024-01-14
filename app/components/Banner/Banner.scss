@@ -1,0 +1,28 @@
+.banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url('../../assets/banner.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #1f1b20;
+
+    .text-content {
+        width: 100%;
+        max-width: 1024px;
+        padding: 2rem;
+
+        h1 {
+            font-size: 3.75rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+    }
+}

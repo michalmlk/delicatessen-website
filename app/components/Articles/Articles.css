@@ -1,0 +1,11 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+/*# sourceMappingURL=Articles.css.map */

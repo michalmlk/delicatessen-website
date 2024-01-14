@@ -1,29 +1,44 @@
 {
   "name": "delicatessen-website",
-  "version": "1.0.0",
   "private": true,
-  "description": "delicatessen-website",
-  "author": "michalmlk",
-  "keywords": [
-    "gatsby"
-  ],
+  "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "build": "remix build",
+    "dev": "remix dev --manual",
+    "dev-sass": "concurrently \"npm run sass\" \"remix dev\"",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/index.js",
+    "typecheck": "tsc",
+    "sass": "sass --watch app/:app/"
   },
   "dependencies": {
-    "gatsby": "^5.13.1",
+    "@remix-run/css-bundle": "^2.5.0",
+    "@remix-run/node": "^2.5.0",
+    "@remix-run/react": "^2.5.0",
+    "@remix-run/serve": "^2.5.0",
+    "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "@types/react": "^18.2.46",
-    "@types/react-dom": "^18.2.18",
-    "typescript": "^5.3.3"
+    "@remix-run/dev": "^2.5.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.69.7",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

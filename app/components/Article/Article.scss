@@ -1,0 +1,16 @@
+.article-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    h1 {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00000d;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+}
