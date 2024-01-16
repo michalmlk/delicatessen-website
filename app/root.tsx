@@ -9,11 +9,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import Topbar from "./components/Topbar/Topbar";
+import Topbar, { links as topBarLinks } from "./components/Topbar/Topbar";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-  { rel: "stylesheet", href: stylesheet}
+  { rel: "stylesheet", href: stylesheet},
+  ...topBarLinks(),
 ];
 
 export default function App() {

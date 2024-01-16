@@ -1,5 +1,5 @@
 import React from 'react'
-import './Banner.css'
+import styles from './Banner.css'
 
 const Banner: React.FC = () => {
   return (
@@ -9,5 +9,10 @@ const Banner: React.FC = () => {
     </div>
   )
 }
+
+export const links = () => [{
+  rel: 'stylesheet',
+  href: styles
+}]
 
 export default Banner

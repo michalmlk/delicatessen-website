@@ -1,0 +1,14 @@
+.menu-items {
+    width: 100%;
+    max-width: 960px;
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(280px, 100%/5)), 1fr));
+    justify-items: center;
+
+
+    h1 {
+        font-size: 4rem;
+    }
+}

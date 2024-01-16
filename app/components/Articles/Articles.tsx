@@ -1,6 +1,6 @@
 import React from 'react'
-import './Articles.css'
-import Article, {ArticleProps} from '../Article/Article'
+import styles from './Articles.css'
+import Article, {ArticleProps, links as articleLinks } from '../Article/Article'
 
 const articles: ArticleProps[] = [
     {
@@ -38,5 +38,10 @@ const Articles: React.FC = () => {
     </div>
   )
 }
+
+export const links = () => [{
+    rel: 'stylesheet',
+    href: styles
+}, ...articleLinks()]
 
 export default Articles

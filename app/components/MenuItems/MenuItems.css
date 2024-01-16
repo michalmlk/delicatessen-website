@@ -1,0 +1,14 @@
+.menu-items {
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(50%, max(280px, 20%)), 1fr));
+  justify-items: center;
+}
+.menu-items h1 {
+  font-size: 4rem;
+}
+
+/*# sourceMappingURL=MenuItems.css.map */

@@ -1,28 +1,31 @@
 import React from 'react'
-import './Topbar.css'
-import { Link, useLocation } from '@remix-run/react'
+import styles from './Topbar.css';
+import { NavLink } from '@remix-run/react'
 
 const Topbar: React.FC = () => {
-  const { pathname } = useLocation();
 
   return (
     <div className="wrapper">
         <ul>
-            <Link to="/" className={`item ${pathname === '/' && 'isActive'}`}>
+            <NavLink to="/" className="item">
                 Główna
-            </Link>
-            <Link to="/menu" className={`item ${pathname === '/menu' && 'isActive'}`}>
+            </NavLink>
+            <NavLink to="/menu" className="item">
                 Menu
-            </Link>
-            <Link to="/about" className={`item ${pathname === '/about' && 'isActive'}`}>
+            </NavLink>
+            <NavLink to="/about" className="item">
                 O nas
-            </Link>
-            <Link to="/contact" className={`item ${pathname === '/contact' && 'isActive'}`}>
+            </NavLink>
+            <NavLink to="/contact" className="item">
                 Kontakt
-            </Link>
+            </NavLink>
         </ul>
     </div>
   )
 }
+
+export const links = () => [
+    { rel: 'stylesheet', href: styles }
+]
 
 export default Topbar

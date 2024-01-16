@@ -1,5 +1,5 @@
 import React from 'react'
-import './Article.css'
+import styles from './Article.css'
 
 export type ArticleProps = {
     title: string;
@@ -14,5 +14,10 @@ const Article: React.FC<ArticleProps> = ({title, content}) => {
     </div>
   )
 }
+
+export const links = () => [{
+  rel: 'stylesheet', 
+  href: styles
+}]
 
 export default Article

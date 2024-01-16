@@ -2,16 +2,13 @@
     width: 100%;
     max-width: 1024px;
     height: 70px;
-    background-color: #ddd;
+    background-color: #1f1b20;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    -webkit-box-shadow: 1px 7px 20px -9px rgba(8, 8, 8, 1);
-    -moz-box-shadow: 1px 7px 20px -9px rgba(8, 8, 8, 1);
-    box-shadow: 1px 7px 20px -16px rgba(8, 8, 8, 1);
     z-index: 2;
 
     ul {
@@ -22,15 +19,16 @@
 
         .item {
             display: block;
-            border-right: 1px solid #0000003c;
+            color: #fff;
+            border-right: 1px solid #ddd;
             width: 120px;
             margin: 10px 0;
             text-align: center;
             font-size: 1.2rem;
             transition: all .2s ease-in;
 
-            &.isActive {
-                color: rgb(179, 0, 0);
+            &.active {
+                color: rgb(255, 0, 0);
             }
 
             &:last-child {
@@ -38,7 +36,7 @@
             }
 
             &:hover {
-                color: rgb(179, 0, 0);
+                color: rgb(252, 45, 45);
                 transform: translateY(-3px);
             }
         }

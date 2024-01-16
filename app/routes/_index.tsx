@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
-import Articles from "~/components/Articles/Articles";
-import Banner from "~/components/Banner/Banner";
+import Articles, { links as articlesLinks } from "~/components/Articles/Articles";
+import Banner, {links as bannerLinks } from "~/components/Banner/Banner";
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,3 +17,5 @@ export default function Index() {
     </div>
   );
 }
+
+export const links = () => ([...articlesLinks(), ...bannerLinks()])
