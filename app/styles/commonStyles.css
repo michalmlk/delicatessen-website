@@ -1,0 +1,16 @@
+.pageContentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1024px;
+  padding: 2rem;
+  margin-top: 120px;
+  gap: 2rem;
+}
+.pageContentWrapper .heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=commonStyles.css.map */

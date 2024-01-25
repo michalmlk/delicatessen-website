@@ -1,0 +1,30 @@
+.footer-wrapper {
+    width: 100%;
+    height: 160px;
+    background-color: #1f1b20;
+    bottom: 0;
+    display: flex;
+    padding: 0 2rem;
+    color: #fff;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: space-between;
+
+    .links {
+
+        ul {
+            text-align: end;
+
+            li {
+
+                a {
+                    transition: color 0.1 ease;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

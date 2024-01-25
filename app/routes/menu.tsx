@@ -39,12 +39,18 @@ const items: MenuItemProps[] = [{
   description: 'Blablabla',
   imageUrl: '',
   price: 25.99
+},{
+  id: 6,
+  title: 'Test item',
+  description: 'Blablabla',
+  imageUrl: '',
+  price: 25.99
 }]
 
 const MenuPage: React.FC = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center mt-[120px]">
-      <h1>Menu</h1>
+    <div className="pageContentWrapper">
+      <h1 className='heading'>Menu</h1>
       <MenuItems items={items} />
     </div>
   )

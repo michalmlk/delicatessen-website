@@ -10,6 +10,8 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   z-index: 2;
+  top: 0;
+  align-self: center;
 }
 .wrapper ul {
   width: 100%;
