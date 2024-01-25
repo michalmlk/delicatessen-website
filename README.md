@@ -4,3 +4,7 @@
 
 In this project I'm trying to create family business delicatessen website with Remix which will be connected with headless CMS.
 
+## Tech stack:
+-Remix + Typescript
+-SCSS + TailwindCSS
+
