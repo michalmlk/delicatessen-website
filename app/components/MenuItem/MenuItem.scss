@@ -1,8 +1,7 @@
 .menu-item-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 50px;
+    align-content: center;
     width: 100%;
     max-width: 360px;
     height: 480px;
@@ -18,8 +17,12 @@
         cursor: pointer;
     }
     
-    img {
-        height: 160px;
+    .imageWrapper {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
     }
 
     .details {
