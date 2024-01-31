@@ -12,5 +12,10 @@
   font-size: 2rem;
   font-weight: bold;
 }
+@media screen and (max-width: 440px) {
+  .pageContentWrapper {
+    padding: 25px !important;
+  }
+}
 
 /*# sourceMappingURL=commonStyles.css.map */
