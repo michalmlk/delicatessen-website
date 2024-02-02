@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const Footer: React.FC = () => {
   return (
@@ -7,11 +10,11 @@ const Footer: React.FC = () => {
         <p>{new Date().getFullYear()} Quchnia Bednarek</p>
         <div className="links">
             <ul>
-                <li>
-                    <a href="/">Facebook</a>
+                <li className="link">
+                    <a href="/" target='_blank'>Facebook <FontAwesomeIcon icon={faFacebook} /></a>
                 </li>
-                <li>
-                    <a href="/">Maps</a>
+                <li className="link">
+                    <a href="/" target='_blank'>Maps <FontAwesomeIcon icon={faMapLocationDot} /></a>
                 </li>
             </ul>
         </div>

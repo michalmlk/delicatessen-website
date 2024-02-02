@@ -12,4 +12,8 @@
         font-size: 2rem;
         font-weight: bold;
     }
+
+    @media screen and (max-width: 440px) {
+        padding: 25px !important;
+    }
 }

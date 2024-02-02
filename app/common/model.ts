@@ -1,8 +1,11 @@
 export type MenuItemProps = {
-    id: number,
-    imageUrl: string,
+    id: string,
     title: string,
+    image: {
+      url: string;
+      alt: string;
+    },
     description: string,
     price: number;
-  
-  }
+    currency: 'zł' | '$' | 'EUR',
+}

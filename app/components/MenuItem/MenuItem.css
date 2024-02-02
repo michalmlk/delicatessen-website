@@ -1,8 +1,7 @@
 .menu-item-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 50px;
+  align-content: center;
   width: 100%;
   max-width: 360px;
   height: 480px;
@@ -17,8 +16,11 @@
   box-shadow: 1px 7px 20px -16px rgb(8, 8, 8);
   cursor: pointer;
 }
-.menu-item-wrapper img {
-  height: 160px;
+.menu-item-wrapper .imageWrapper {
+  overflow: hidden;
+}
+.menu-item-wrapper .imageWrapper img {
+  width: 100%;
 }
 .menu-item-wrapper .details {
   padding: 1rem;
