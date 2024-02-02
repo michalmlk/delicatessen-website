@@ -13,10 +13,13 @@
 .footer-wrapper .links ul {
   text-align: end;
 }
-.footer-wrapper .links ul li a {
-  transition: color 0.1 ease;
+.footer-wrapper .links ul .link {
+  transition: color 0.1s ease;
 }
-.footer-wrapper .links ul li a:hover {
+.footer-wrapper .links ul .link a {
+  transition: color 0.2 ease;
+}
+.footer-wrapper .links ul .link a:hover {
   color: red;
 }
 

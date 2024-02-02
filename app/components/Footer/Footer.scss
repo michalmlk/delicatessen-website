@@ -15,10 +15,11 @@
         ul {
             text-align: end;
 
-            li {
+            .link {
+                transition: color .1s ease;
 
                 a {
-                    transition: color 0.1 ease;
+                    transition: color 0.2 ease;
 
                     &:hover {
                         color: red;
