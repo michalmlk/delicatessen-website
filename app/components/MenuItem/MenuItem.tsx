@@ -1,9 +1,11 @@
 import React from 'react'
 import { MenuItemProps } from '~/common/model'
 import styles from './MenuItem.css';
+import { Link } from '@remix-run/react';
+import _ from 'lodash'
 
-const MenuItem: React.FC<MenuItemProps> = ({title, description, price, image, currency}) => {
-  console.log(image.url);
+const MenuItem: React.FC<MenuItemProps> = ({ title, description, price, image, currency }) => {
+  const idOfItem = _.camelCase(title);
   return (
     <div className="menu-item-wrapper">
       <div className="imageWrapper">
@@ -13,6 +15,7 @@ const MenuItem: React.FC<MenuItemProps> = ({title, description, price, image, cu
         <h2>{title}</h2>
         <h3>{price} {currency}</h3>
         <p className="description">{description}</p>
+        <Link prefetch='intent' to={`/menu/${idOfItem}`}>Check</Link>
       </div>
     </div>
   )
