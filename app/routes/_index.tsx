@@ -1,8 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Articles, { links as articlesLinks } from "~/components/Articles/Articles";
-import Banner, {links as bannerLinks } from "~/components/Banner/Banner";
 import { load } from '~/lib/datocms';
+import indexBanner from '../assets/banner.png';
+import Banner from "~/components/Banner/Banner";
 
 export const meta: MetaFunction = () => {
   return [
@@ -37,10 +38,10 @@ export default function Index() {
   const { allArticles } = useLoaderData<typeof loader>();
   return (
     <div className="w-full min-h-screen flex flex-col items-center">
-      <Banner />
+      <Banner localImage={indexBanner} backgroundColor="#1f1b20" />
       <Articles data={allArticles} />
     </div>
   );
 }
 
-export const links = () => ([...articlesLinks(), ...bannerLinks()])
+export const links = () => ([...articlesLinks()])
