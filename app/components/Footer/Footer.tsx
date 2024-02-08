@@ -3,27 +3,38 @@ import styles from './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { Link } from '@nextui-org/react';
 
 const Footer: React.FC = () => {
-  return (
-    <div className='footer-wrapper'>
-        <p>{new Date().getFullYear()} Quchnia Bednarek</p>
-        <div className="links">
-            <ul>
-                <li className="link">
-                    <a href="/" target='_blank'>Facebook <FontAwesomeIcon icon={faFacebook} /></a>
-                </li>
-                <li className="link">
-                    <a href="/" target='_blank'>Maps <FontAwesomeIcon icon={faMapLocationDot} /></a>
-                </li>
-            </ul>
+    return (
+        <div className="footer-wrapper">
+            <p>{new Date().getFullYear()} Quchnia Bednarek</p>
+            <div className="links">
+                <ul>
+                    <Link
+                        isExternal
+                        isBlock
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<FontAwesomeIcon icon={faFacebook} />}
+                    >
+                        {'Facebook '}
+                    </Link>
+                    <Link
+                        isExternal
+                        isBlock
+                        showAnchorIcon
+                        href="https://github.com/nextui-org/nextui"
+                        anchorIcon={<FontAwesomeIcon icon={faMapLocationDot} />}
+                    >
+                        {'Maps '}
+                    </Link>
+                </ul>
+            </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export const links = () => [
-    {rel: 'stylesheet', href: styles}
-]
+export const links = () => [{ rel: 'stylesheet', href: styles }];
 
-export default Footer
+export default Footer;

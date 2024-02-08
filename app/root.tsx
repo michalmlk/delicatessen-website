@@ -12,6 +12,7 @@ import {
 } from "@remix-run/react";
 import Topbar, { links as topBarLinks } from "~/components/Topbar/Topbar";
 import Footer, { links as footerLinks } from '~/components/Footer/Footer';
+import { NextUIProvider } from "@nextui-org/react";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -31,7 +32,8 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="w-full flex flex-col justify-center items-center">
+        <NextUIProvider>
+        <div className="w-full flex flex-col justify-center items-center dark text-foreground bg-background">
           <Topbar />
           <Outlet />
           <Footer />
@@ -39,6 +41,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        </NextUIProvider>
       </body>
     </html>
   );

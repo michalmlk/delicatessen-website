@@ -1,8 +1,8 @@
 .menu-items {
+  display: grid;
   width: 100%;
   max-width: 1024px;
-  display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(50%, max(280px, 20%)), 1fr));
   justify-items: center;
 }
