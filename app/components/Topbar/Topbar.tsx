@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Topbar.css';
 import { NavLink } from '@remix-run/react';
 import {
+    Link,
     Navbar,
     NavbarContent,
     NavbarItem,
@@ -9,6 +10,9 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from '@nextui-org/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const Topbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -31,7 +35,7 @@ const Topbar: React.FC = () => {
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <NavLink to="/" className="item" prefetch="intent">
-                        Główna
+                        Home
                     </NavLink>
                 </NavbarItem>
                 <NavbarItem>
@@ -41,14 +45,32 @@ const Topbar: React.FC = () => {
                 </NavbarItem>
                 <NavbarItem>
                     <NavLink to="/about" className="item" prefetch="intent">
-                        O nas
+                        About
                     </NavLink>
                 </NavbarItem>
                 <NavbarItem>
                     <NavLink to="/contact" className="item" prefetch="intent">
-                        Kontakt
+                        Contact
                     </NavLink>
                 </NavbarItem>
+            </NavbarContent>
+            <NavbarContent className="icons">
+                <Link
+                    isExternal
+                    isBlock
+                    showAnchorIcon
+                    href="https://github.com/nextui-org/nextui"
+                    anchorIcon={<FontAwesomeIcon icon={faFacebook} />}
+                    style={{ color: 'red' }}
+                ></Link>
+                <Link
+                    isExternal
+                    isBlock
+                    showAnchorIcon
+                    href="https://github.com/nextui-org/nextui"
+                    anchorIcon={<FontAwesomeIcon icon={faMapLocationDot} />}
+                    style={{ color: 'red' }}
+                ></Link>
             </NavbarContent>
             <NavbarMenu>
                 {menuItems.map((item) => (

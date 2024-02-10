@@ -6,24 +6,6 @@ import { Button, Card, CardFooter, CardHeader, Image, useDisclosure } from '@nex
 import ItemDetailsModal from '../ItemDetailsModal/ItemDetailsModal';
 
 const MenuItem: React.FC<MenuItemProps> = ({ title, description, price, image, currency }) => {
-    const idOfItem = _.camelCase(title);
-    //     <div className="menu-item-wrapper">
-    //         <div className="imageWrapper">
-    //             <img src={image.url} alt={image.alt} />
-    //         </div>
-    //         <div className="details">
-    //             <h2>{title}</h2>
-    //             <h3>
-    //                 {price} {currency}
-    //             </h3>
-    //             <p className="description">{description}</p>
-    //             <Link prefetch="intent" to={`/menu/${idOfItem}`}>
-    //                 Check
-    //             </Link>
-    //         </div>
-    //     </div>
-    // );
-
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     return (
         <>
@@ -55,7 +37,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, description, price, image, c
                         </p>
                     </div>
                     <Button radius="full" size="sm" onClick={onOpen}>
-                        Więcej
+                        More
                     </Button>
                 </CardFooter>
             </Card>

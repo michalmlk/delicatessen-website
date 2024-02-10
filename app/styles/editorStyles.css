@@ -1,0 +1,23 @@
+.editor-formatting h1 {
+  font-size: 2rem !important;
+}
+.editor-formatting h2 {
+  font-size: 1.5rem;
+}
+.editor-formatting h3 {
+  font-size: 1.25rem;
+}
+.editor-formatting ul,
+.editor-formatting ol,
+.editor-formatting menu {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.editor-formatting ul {
+  list-style: unset;
+}
+.editor-formatting ol {
+  list-style: decimal;
+}
+
+/*# sourceMappingURL=editorStyles.css.map */

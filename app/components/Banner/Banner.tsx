@@ -22,14 +22,14 @@ const StyledBanner = styled.div<BannerProps>`
     }
 
     @media (max-width: 640px) {
-        height: 100px;
+        height: 150px;
     }
 `;
 
 const Banner: React.FC<BannerProps> = ({
     localImage,
     backgroundColor = 'transparent',
-    height = 500,
+    height = 300,
 }) => {
     return (
         <StyledBanner localImage={localImage} backgroundColor={backgroundColor} height={height}>

@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
 import { StructuredText } from 'react-datocms';
 import { htmlToStructuredText } from 'datocms-html-to-structured-text';
+import editorStyles from '~/styles/editorStyles.css';
 import styles from './Article.css';
 
 export type ArticleProps = {
@@ -13,13 +14,11 @@ export type ArticleProps = {
 };
 
 const Article: React.FC<ArticleProps> = ({ content, _firstPublishedAt }) => {
-    console.log(content);
     const [data, setData] = React.useState<any>();
 
     useEffect(() => {
         htmlToStructuredText(content).then((structuredText) => setData(structuredText));
     }, []);
-    console.log(data);
 
     return (
         <Card className="w-full p-4">
@@ -27,7 +26,7 @@ const Article: React.FC<ArticleProps> = ({ content, _firstPublishedAt }) => {
                 <p>{format(new Date(_firstPublishedAt), 'dd/MM/yyyy')}</p>
             </CardHeader>
             <Divider />
-            <CardBody>
+            <CardBody className="editorStyles">
                 <StructuredText data={data} />
             </CardBody>
         </Card>
@@ -38,6 +37,10 @@ export const links = () => [
     {
         rel: 'stylesheet',
         href: styles,
+    },
+    {
+        rel: 'stylesheet',
+        href: editorStyles,
     },
 ];
 
