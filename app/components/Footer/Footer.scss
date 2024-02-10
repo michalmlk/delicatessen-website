@@ -11,19 +11,18 @@
     justify-content: space-between;
 
     .links {
-
         ul {
             text-align: end;
 
-            .link {
-                transition: color .1s ease;
+            a {
+                display: flex;
+                transition: color 0.2 ease;
+                color: #fff;
+                gap: 5px;
+                justify-content: space-between;
 
-                a {
-                    transition: color 0.2 ease;
-
-                    &:hover {
-                        color: red;
-                    }
+                &:hover {
+                    color: red;
                 }
             }
         }

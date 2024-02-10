@@ -8,7 +8,6 @@ type MenuItemsProps = {
 }
   
 const MenuItems: React.FC<MenuItemsProps> = ({items}) => {
-    console.log(items);
     return (
         <div className='menu-items'>
             {items.length ? items.map((item) => <MenuItem key={item.id} {...item} />) : <h1>No items</h1>}

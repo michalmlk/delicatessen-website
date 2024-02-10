@@ -1,0 +1,27 @@
+.editor-formatting {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    ul,
+    ol,
+    menu {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    ul {
+        list-style: unset;
+    }
+    ol {
+        list-style: decimal;
+    }
+}

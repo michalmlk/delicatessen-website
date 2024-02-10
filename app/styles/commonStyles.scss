@@ -1,3 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .pageContentWrapper {
     display: flex;
     flex-direction: column;
@@ -5,11 +14,10 @@
     min-height: 100vh;
     max-width: 1024px;
     padding: 2rem;
-    margin-top: 120px;
     gap: 2rem;
 
     p {
-        text-align: justify; 
+        text-align: justify;
         word-break: break-word;
     }
 
@@ -18,7 +26,7 @@
         margin-top: 0;
     }
 
-    .contentWithBannerWrapper{
+    .contentWithBannerWrapper {
         padding: 2rem !important;
     }
 
@@ -34,7 +42,7 @@
         text-align: justify;
         gap: 1rem;
 
-        @media  screen and (max-width: 440px) {
+        @media screen and (max-width: 440px) {
             flex-direction: column;
 
             .image {
@@ -45,5 +53,17 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section[role='dialog'] {
+        img {
+            max-height: 320px;
+        }
+    }
+
+    .homepage > div:first-child {
+        justify-content: start;
     }
 }
