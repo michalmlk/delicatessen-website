@@ -1,30 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { format } from 'date-fns';
-import styles from './Article.css'
+import { Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import { StructuredText } from 'react-datocms';
+import { htmlToStructuredText } from 'datocms-html-to-structured-text';
+import styles from './Article.css';
 
 export type ArticleProps = {
     id: string;
-    title: string;
-    content: string;
+    content: any;
     _firstPublishedAt: string;
     _status?: string;
-}
+};
 
-const Article: React.FC<ArticleProps> = ({title, content, _firstPublishedAt}) => {
-  return (
-    <div className='article-wrapper'>
-      <div className='header'>
-      <h1>{title}</h1>
-      <p>{format(new Date(_firstPublishedAt), 'dd/MM/yyyy')}</p>
-      </div>
-        <p>{content}</p>
-    </div>
-  )
-}
+const Article: React.FC<ArticleProps> = ({ content, _firstPublishedAt }) => {
+    console.log(content);
+    const [data, setData] = React.useState<any>();
 
-export const links = () => [{
-  rel: 'stylesheet', 
-  href: styles
-}]
+    useEffect(() => {
+        htmlToStructuredText(content).then((structuredText) => setData(structuredText));
+    }, []);
+    console.log(data);
 
-export default Article
+    return (
+        <Card className="w-full p-4">
+            <CardHeader className="flex justify-between">
+                <p>{format(new Date(_firstPublishedAt), 'dd/MM/yyyy')}</p>
+            </CardHeader>
+            <Divider />
+            <CardBody>
+                <StructuredText data={data} />
+            </CardBody>
+        </Card>
+    );
+};
+
+export const links = () => [
+    {
+        rel: 'stylesheet',
+        href: styles,
+    },
+];
+
+export default Article;

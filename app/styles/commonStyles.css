@@ -1,3 +1,8 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .pageContentWrapper {
   display: flex;
   flex-direction: column;
@@ -40,6 +45,12 @@
   }
   .pageContentWrapper .article .image img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section[role=dialog] img {
+    max-height: 320px;
   }
 }
 

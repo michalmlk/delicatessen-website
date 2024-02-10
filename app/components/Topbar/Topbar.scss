@@ -1,22 +1,22 @@
+.item {
+    display: block;
+    width: 120px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in;
 
-        .item {
-            display: block;
-            width: 120px;
-            margin: 10px 0;
-            text-align: center;
-            font-size: 1.2rem;
-            transition: all .2s ease-in;
+    &.active {
+        color: rgb(255, 0, 0);
+    }
 
-            &.active {
-                color: rgb(255, 0, 0);
-            }
+    &:last-child {
+        border-right: none;
+    }
 
-            &:last-child {
-                border-right: none;
-            }
-
-            &:hover {
-                color: rgb(252, 45, 45);
-                transform: translateY(-3px);
-            }
-        }
+    &:hover {
+        color: rgb(252, 45, 45);
+        transform: translateY(-3px);
+    }
+}

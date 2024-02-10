@@ -1,3 +1,8 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .pageContentWrapper {
     display: flex;
     flex-direction: column;
@@ -9,7 +14,7 @@
     gap: 2rem;
 
     p {
-        text-align: justify; 
+        text-align: justify;
         word-break: break-word;
     }
 
@@ -18,7 +23,7 @@
         margin-top: 0;
     }
 
-    .contentWithBannerWrapper{
+    .contentWithBannerWrapper {
         padding: 2rem !important;
     }
 
@@ -34,7 +39,7 @@
         text-align: justify;
         gap: 1rem;
 
-        @media  screen and (max-width: 440px) {
+        @media screen and (max-width: 440px) {
             flex-direction: column;
 
             .image {
@@ -44,6 +49,14 @@
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section[role='dialog'] {
+        img {
+            max-height: 320px;
         }
     }
 }
