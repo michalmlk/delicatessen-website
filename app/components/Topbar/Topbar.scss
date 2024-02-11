@@ -19,6 +19,10 @@
         color: rgb(252, 45, 45);
         transform: translateY(-3px);
     }
+
+    &.mobile {
+        text-align: left;
+    }
 }
 
 .icons {

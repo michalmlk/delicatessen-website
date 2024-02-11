@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Topbar.css';
-import { NavLink } from '@remix-run/react';
+import { NavLink, useLocation, useNavigate } from '@remix-run/react';
 import {
     Link,
     Navbar,
@@ -72,10 +72,10 @@ const Topbar: React.FC = () => {
                     style={{ color: 'red' }}
                 ></Link>
             </NavbarContent>
-            <NavbarMenu>
+            <NavbarMenu className="bg-transparent text-white">
                 {menuItems.map((item) => (
                     <NavbarMenuItem key={`${item.href}`}>
-                        <NavLink className={`w-full`} to={item.href}>
+                        <NavLink className={`w-full item mobile`} to={item.href}>
                             {item.label}
                         </NavLink>
                     </NavbarMenuItem>
